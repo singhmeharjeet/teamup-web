@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BellRing, Users, MessageSquare, Calendar } from "lucide-react";
+import { BellRing, PlusCircle, User, Volleyball } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function TeamUpLandingPage() {
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
+		<div className="min-h-screen">
 			{/* Background illustrations */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<svg
@@ -35,20 +36,27 @@ export function TeamUpLandingPage() {
 			</div>
 
 			{/* Hero Section */}
-			<section className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen">
+			<section className="relative flex content-center items-center justify-center h-[100dvh] ">
+				<div className="absolute bg-[url('/bg.jpeg')] bg-no-repeat bg-cover h-screen w-[100dvw]" />
+				<div className="absolute bg-black/40 z-10 h-screen w-[100dvw]" />
 				<div className="container mx-auto px-4">
 					<div className="flex flex-wrap items-center">
-						<div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-							<h1 className="text-5xl font-semibold text-gray-900 leading-tight mb-4">
-								Team Up: Collaborate Seamlessly
+						<div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center z-20">
+							<h1 className="text-7xl font-semibold text-gray-200 leading-tight mb-4">
+								TeamUp <br />
+								<span className="italic text-6xl">
+									Hop On, Game On
+								</span>
 							</h1>
-							<p className="mt-4 text-lg text-gray-700">
-								Boost your teams productivity with real-time
-								collaboration, task management, and seamless
-								communication.
+							<p className="mt-4 text-lg text-gray-100 text-balance">
+								Your one stop solution for connecting sports
+								enthusiasts, joining local games and building a
+								community of active players.
 							</p>
-							<Button className="mt-8" size="lg">
-								Download Now
+							<Button className="mt-8 z-20" size="lg" asChild>
+								<Link href="#team" scroll>
+									Jump In
+								</Link>
 							</Button>
 						</div>
 					</div>
@@ -56,13 +64,13 @@ export function TeamUpLandingPage() {
 			</section>
 
 			{/* About the Authors Section */}
-			<section className="py-20 bg-white">
+			<section className="py-20 bg-white" id="team">
 				<div className="container mx-auto px-4">
 					<h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
 						Meet the Team
 					</h2>
 					<div className="flex flex-wrap">
-						{["Tom", "Mitchel", "John", "Mehar"].map(
+						{["Tom", "Mitchell", "John", "Mehar"].map(
 							(name, index) => (
 								<div
 									key={index}
@@ -101,20 +109,20 @@ export function TeamUpLandingPage() {
 			</section>
 
 			{/* Video Demo Section */}
-			<section className="py-20 bg-gray-100">
+			<section className="pb-20 pt-12 bg-gray-100">
 				<div className="container mx-auto px-4">
 					<h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
-						See Team Up in Action
+						See TeamUp in Action
 					</h2>
 					<div className="flex justify-center">
-						<div className="w-full lg:w-8/12 xl:w-6/12">
+						<div className="w-full lg:w-8/12 xl:w-2/3">
 							<div
 								className="relative"
 								style={{ paddingBottom: "56.25%" }}
 							>
 								<iframe
 									className="absolute inset-0 w-full h-full"
-									src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+									src="https://www.youtube.com/embed/au_uEesB0U8"
 									title="Team Up Demo Video"
 									frameBorder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -137,22 +145,26 @@ export function TeamUpLandingPage() {
 							{
 								icon: BellRing,
 								title: "Real-time Notifications",
-								description: "Stay updated with instant alerts",
+								description:
+									"Stay updated on game invites and reminders",
 							},
 							{
-								icon: Users,
-								title: "Team Collaboration",
-								description: "Work together seamlessly",
+								icon: Volleyball,
+								title: "Discover Local Events",
+								description:
+									"Find and join sporting events near you",
 							},
 							{
-								icon: MessageSquare,
-								title: "Instant Messaging",
-								description: "Communicate efficiently",
+								icon: PlusCircle,
+								title: "Create Events",
+								description:
+									"Host your own games and invite others",
 							},
 							{
-								icon: Calendar,
-								title: "Task Scheduling",
-								description: "Organize your workflow",
+								icon: User,
+								title: "Custom Profiles",
+								description:
+									"Showcase your sports interests and achievements",
 							},
 						].map((feature, index) => (
 							<div
@@ -177,13 +189,13 @@ export function TeamUpLandingPage() {
 			</section>
 
 			{/* Diagram Section */}
-			<section className="py-20 bg-gray-100">
+			<section className="pb-20 pt-12 bg-gray-100">
 				<div className="container mx-auto px-4">
 					<h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
-						How Team Up Works
+						How TeamUp Works
 					</h2>
 					<div className="flex justify-center">
-						<div className="w-full lg:w-8/12 xl:w-6/12">
+						<div className="w-full lg:w-8/12 xl:w-2/3">
 							<Image
 								className="rounded-lg drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
 								src="/mvvm.png"
