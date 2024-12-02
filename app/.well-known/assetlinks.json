@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.teamup",
+    "sha256_cert_fingerprints":
+    ["FD:C6:06:21:B0:2F:F3:82:6A:43:72:3B:96:2D:4C:B8:3A:08:4C:5F:1A:FE:6C:58:95:F8:A3:D9:A7:D4:C3:8C"]
+  }
+}]

@@ -54,9 +54,7 @@ export function TeamUpLandingPage() {
 								community of active players.
 							</p>
 							<Button className="mt-8 z-20" size="lg" asChild>
-								<Link href="#team" scroll>
-									Jump In
-								</Link>
+								<Link href="#team">Jump In</Link>
 							</Button>
 						</div>
 					</div>
@@ -123,6 +121,23 @@ export function TeamUpLandingPage() {
 								<iframe
 									className="absolute inset-0 w-full h-full"
 									src="https://www.youtube.com/embed/au_uEesB0U8"
+									title="Team Up Demo Video"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+								></iframe>
+							</div>
+						</div>
+					</div>
+					<div className="flex justify-center">
+						<div className="w-full lg:w-8/12 xl:w-2/3">
+							<div
+								className="relative"
+								style={{ paddingBottom: "56.25%" }}
+							>
+								<iframe
+									className="absolute inset-0 w-full h-full"
+									src="https://www.youtube.com/embed/BH59JQOno6c"
 									title="Team Up Demo Video"
 									frameBorder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
