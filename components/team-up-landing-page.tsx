@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BellRing, PlusCircle, User, Volleyball } from "lucide-react";
+import { PlusCircle, User, Volleyball } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -53,8 +53,12 @@ export function TeamUpLandingPage() {
 								enthusiasts, joining local games and building a
 								community of active players.
 							</p>
+
 							<Button className="mt-8 z-20" size="lg" asChild>
 								<Link href="#team">Jump In</Link>
+							</Button>
+							<Button className="mt-8 z-20 ml-4" size="lg" asChild>
+								<Link href={"/teamup.apk"}>Download APK</Link>
 							</Button>
 						</div>
 					</div>
@@ -108,10 +112,27 @@ export function TeamUpLandingPage() {
 
 			{/* Video Demo Section */}
 			<section className="pb-20 pt-12 bg-gray-100">
-				<div className="container mx-auto px-4">
+				<div className="container mx-auto px-4 space-y-8">
 					<h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
 						See TeamUp in Action
 					</h2>
+					<div className="flex justify-center">
+						<div className="w-full lg:w-8/12 xl:w-2/3">
+							<div
+								className="relative"
+								style={{ paddingBottom: "56.25%" }}
+							>
+								<iframe
+									className="absolute inset-0 w-full h-full"
+									src="https://www.youtube.com/embed/9a9SPCUo6XA"
+									title="Team Up Demo Video"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+								></iframe>
+							</div>
+						</div>
+					</div>
 					<div className="flex justify-center">
 						<div className="w-full lg:w-8/12 xl:w-2/3">
 							<div
@@ -146,6 +167,23 @@ export function TeamUpLandingPage() {
 							</div>
 						</div>
 					</div>
+					<div className="flex justify-center">
+						<div className="w-full lg:w-8/12 xl:w-2/3">
+							<div
+								className="relative"
+								style={{ paddingBottom: "56.25%" }}
+							>
+								<iframe
+									className="absolute inset-0 w-full h-full"
+									src="https://www.youtube.com/embed/8NSOQaSIBgw"
+									title="Team Up Demo Video"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+								></iframe>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -155,14 +193,8 @@ export function TeamUpLandingPage() {
 					<h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
 						Key Features
 					</h2>
-					<div className="flex flex-wrap">
+					<div className="flex flex-wrap w-full justify-center items-center">
 						{[
-							{
-								icon: BellRing,
-								title: "Real-time Notifications",
-								description:
-									"Stay updated on game invites and reminders",
-							},
 							{
 								icon: Volleyball,
 								title: "Discover Local Events",
@@ -210,10 +242,24 @@ export function TeamUpLandingPage() {
 						How TeamUp Works
 					</h2>
 					<div className="flex justify-center">
-						<div className="w-full lg:w-8/12 xl:w-2/3">
+						<div className="w-full lg:w-8/12 xl:w-2/3 space-y-8">
 							<Image
 								className="rounded-lg drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
 								src="/mvvm.png"
+								width={800}
+								height={600}
+								alt="Team Up Diagram"
+							/>
+							<Image
+								className="rounded-lg drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+								src="/db.png"
+								width={800}
+								height={600}
+								alt="Team Up Diagram"
+							/>
+							<Image
+								className="rounded-lg drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+								src="/thread.png"
 								width={800}
 								height={600}
 								alt="Team Up Diagram"
