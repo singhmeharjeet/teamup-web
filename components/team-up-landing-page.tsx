@@ -57,8 +57,25 @@ export function TeamUpLandingPage() {
 							<Button className="mt-8 z-20" size="lg" asChild>
 								<Link href="#team">Jump In</Link>
 							</Button>
-							<Button className="mt-8 z-20 ml-4" size="lg" asChild>
+							<Button
+								className="mt-8 z-20 ml-4"
+								size="lg"
+								asChild
+							>
 								<Link href={"/teamup.apk"}>Download APK</Link>
+							</Button>
+							<Button
+								className="mt-8 z-20 ml-4"
+								size="lg"
+								asChild
+							>
+								<Link
+									href={
+										"https://drive.google.com/file/d/1oThD4TMdRlu_ppMrSXZAHZV5TsonkHaW/view?usp=sharing"
+									}
+								>
+									Source Code
+								</Link>
 							</Button>
 						</div>
 					</div>
